@@ -1,0 +1,174 @@
+.carousel-control-prev, 
+.carousel-control-next {
+  background-color: black !important; 
+  border-radius: 50%; 
+  width: 50px; 
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .NavContainer {
+  background: linear-gradient(to bottom, #E9A5F1, #FFFFFF);
+} */
+
+
+.NavBar .nav-item {
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .NavBar .nav-item:hover {
+    transform: scale(1.1);
+    color: #ff6600; 
+  }
+  
+  .NavBar .nav-item:hover small {
+    font-weight: bold;
+    color: #ff6600;
+  }
+  
+  .NavBar .nav-item svg {
+    font-size: 24px; 
+    transition: color 0.3s ease;
+  }
+  
+  .NavBar .nav-item:hover svg {
+    color: #ff6600;
+  }
+  
+/* Login Box */
+.login-box {
+  background-color: aqua;
+  height: 450px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LoginPage Css */
+
+.logo {
+  width: 100px;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+.phone-input {
+  border-radius: 20px;
+  width: 80%;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.custom-button {
+  width: 80%;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.custom-button:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+.terms {
+  margin-top: 15px;
+}
+
+/* App Download Box */
+.app-box {
+  background-color: red;
+  height: 450px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Store Download Buttons */
+.store-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 80%;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.store-btn:hover {
+  background-color: #333;
+}
+
+/* Icons inside buttons */
+.icon {
+  font-size: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .login-box, .app-box {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .custom-button, .store-btn {
+    width: 100%;
+  }
+}
+
+/* HighLighted Coffee Sec */
+
+.Coffee{
+  background: linear-gradient("to bottom ,EC7FA9, EC7FA9");
+}
+
+/* productListBoots  */
+
+/* .product-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  background: rgb(30,18,247);
+  width: 40%;
+  height: 50px;
+  background: linear-gradient(90deg, rgba(30,18,247,1) 0%, rgba(213,86,156,1) 0%, rgba(199,165,171,1) 0%, rgba(198,112,143,1) 0%, rgba(141,208,93,1) 0%, rgba(226,197,198,1) 0%, rgba(6,203,243,1) 89%);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  height: 200px;
+  object-fit: contain;
+  background-color: #f5f5f5;
+  padding: 1rem;
+} */
+
+
+
