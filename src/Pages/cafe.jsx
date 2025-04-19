@@ -18,21 +18,56 @@ const Cafe = () => {
     { id: 14, src: 'https://cdn.zeptonow.com/production/tr:w-160,ar-333-412,pr-true,f-auto,q-80/inventory/banner/3ba3942b-7bb7-4d6a-86b9-7332aa1369ca.png', alt: 'cafe14' },
   ];
 
+  const newlyLaunched = [
+    { id: 15, src: 'https://cdn.zeptonow.com/production/ik-seo/tr:w-350,ar-6042-4532,pr-true,f-auto,q-80/cms/product_variant/8968385c-9a51-4a68-8f97-2d0b917309b3/Magic-Masala-Burst-Popcorn.jpeg', alt: 'Magic Masala Popcorn', pc: "1pc", price: "₹59" },
+    { id: 16, src: 'https://cdn.zeptonow.com/production/ik-seo/tr:w-350,ar-2400-2400,pr-true,f-auto,q-80/cms/product_variant/7e97ff9d-38d0-4fef-842c-fa3dfe3a847a/Adrak-Chai-500-mL.jpeg', alt: 'Adrak Chai 500mL', liter: "500ml", price: "₹39" },
+    { id: 17, src: 'https://cdn.zeptonow.com/production/ik-seo/tr:w-350,ar-2400-2400,pr-true,f-auto,q-80/cms/product_variant/7e97ff9d-38d0-4fef-842c-fa3dfe3a847a/Adrak-Chai-500-mL.jpeg', alt: 'Adrak Chai 400mL', liter: "400ml", price: "₹29" },
+    { id: 18, src: 'https://cdn.zeptonow.com/production/ik-seo/tr:w-350,ar-2400-2400,pr-true,f-auto,q-80/cms/product_variant/c4b385b7-bb37-497f-bc8a-f336e6a59f69/Adrak-Chai-No-Sugar-500-mL.jpeg', alt: 'Adrak Chai No Sugar', liter: "200ml", price: "₹25" },
+    { id: 19, src: 'https://cdn.zeptonow.com/production/ik-seo/tr:w-350,ar-4155-4155,pr-true,f-auto,q-80/cms/product_variant/60dbafd0-77a4-4553-8105-f5fc56e527b3/Masala-Chai-500-mL.jpeg', alt: 'Masala Chai 500mL', liter: "500ml", price: "₹39" },
+    { id: 20, src: 'https://cdn.zeptonow.com/production/ik-seo/tr:w-350,ar-4992-4992,pr-true,f-auto,q-80/cms/product_variant/b0cab7fd-6d47-4dcc-a1d7-c7c37520be9b/Classic-Chai-500-mL.jpeg', alt: 'Classic Chai 400mL', liter: "400ml", price: "₹29" },
+    { id: 21, src: 'https://cdn.zeptonow.com/production/ik-seo/tr:w-350,ar-4155-4155,pr-true,f-auto,q-80/cms/product_variant/71acc3dc-9367-4090-ae36-f6aa1a98c134/Masala-Chai-No-Sugar-500-mL.jpeg', alt: 'Masala Chai No Sugar', liter: "250ml", price: "₹22" },
+    { id: 22, src: 'https://cdn.zeptonow.com/production/ik-seo/tr:w-350,ar-4992-4992,pr-true,f-auto,q-80/cms/product_variant/e9769ba7-3144-469c-884e-7ec4955ffcba/Classic-Chai-No-Sugar-500-mL.jpeg', alt: 'Classic Chai No Sugar', liter: "450ml", price: "₹35" },
+    { id: 23, src: 'https://cdn.zeptonow.com/production/ik-seo/tr:w-350,ar-5696-4272,pr-true,f-auto,q-80/cms/product_variant/e88808f3-bf40-428a-8e02-66ab07d34a2e/Tangy-Tomato-Popcorn.jpeg', alt: 'Tangy Tomato Popcorn', pc: "2pc", price: "₹99" },
+  ];
+
+
   return (
     <div className='container mt-5'>
-      <h3 className='mb-4'>🍰 What's On Your Mind?</h3>
+    <h3 className='mb-4'>🍰 What's On Your Mind?</h3>
 
-      <div style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
-        {cafeImages.map((image) => (
-          <div key={image.id} className="d-inline-block mx-2">
-            <div className="card border-0" style={{ width: '160px' }}>
-              <img src={image.src} alt={image.alt} className="card-img-top rounded" />
+    <div style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
+      {cafeImages.map((image) => (
+        <div key={image.id} className="d-inline-block mx-2">
+          <div className="card border-0" style={{ width: '160px' }}>
+            <img src={image.src} alt={image.alt} className="card-img-top rounded" />
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <h3 className='mt-5 mb-4'>🆕 Newly Launched</h3>
+
+    <div style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
+      {newlyLaunched.map((item) => (
+        <div key={item.id} className="d-inline-block mx-2">
+          <div className="card" style={{ width: '200px' }}>
+            <img src={item.src} alt={item.alt} className="card-img-top rounded" />
+            <div className="card-body p-2">
+              <h6 className="card-title text-center mb-1">{item.alt}</h6>
+              <p className="text-center text-muted small mb-0">
+                {item.liter ? item.liter : item.pc}
+              </p>
+              <h6 className="text-center text-success mb-2">{item.price}</h6>
+              <div className="text-center">
+              <button className="btn btn-outline-success btn-sm w-100">Add to Cart</button>
+                </div>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
-  );
+  </div>
+);
 };
 
 export default Cafe;
